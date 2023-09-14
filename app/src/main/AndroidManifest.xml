@@ -30,6 +30,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ThirdActivity"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="com.example.myapplication.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

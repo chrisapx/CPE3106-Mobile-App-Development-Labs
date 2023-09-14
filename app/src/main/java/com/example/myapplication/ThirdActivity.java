@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SecondActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
 
 
     @Override
@@ -15,23 +15,12 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Button
-                back_to_home = findViewById(R.id.back_to_home),
-                go_to_about = findViewById(R.id.go_to_about);
+        Button back_to_home = findViewById(R.id.back_to_home);
 
         back_to_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
-
-                startActivity(intent);
-            }
-        });
-
-        go_to_about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                Intent intent = new Intent(ThirdActivity.this, MainActivity.class);
 
                 startActivity(intent);
             }
