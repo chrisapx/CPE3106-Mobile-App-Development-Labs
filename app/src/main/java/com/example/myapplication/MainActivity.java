@@ -1,9 +1,13 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.util.Log;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +16,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Find the button by its ID
+        Button button = findViewById(R.id.button);
+
+        // Set an OnClickListener for the button
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the SecondActivity class
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                // Start the SecondActivity
+                startActivity(intent);
+            }
+        });
+
         Log.d(tag, "In the onCreate() event");
     }
 
